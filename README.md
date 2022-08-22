@@ -30,7 +30,7 @@ Connect to your managerhost using SSH or any other form that works and follow th
     Follow the [install kubectl on linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) from the kubernetes documentations.\
     Verify with following command
     ```
-    kubectl version
+    kubectl version --client
     ```
 
 After you have successfully installed previous packages login to your azure portal with "az login", follow instruction and connect to you azure portal. after you login you should be able to see your account details with "az account show".\
