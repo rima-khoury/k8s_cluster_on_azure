@@ -20,7 +20,7 @@ Connect to your managerhost using SSH or any other form that works and follow th
     ```
 
 3. Downlaod and install aks-engine\
-    For this example I followed [Install the AKS engine on Linux in Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-deploy-linux?view=azs-2206) guide from Microsoft documentation.\
+    For this example I followed [Install the AKS engine on Linux in Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-deploy-linux?view=azs-2206) guide from Microsoft documentation. For this example I am using version 0.70.0\
     Verify with following command
     ```
     aks-engine version
