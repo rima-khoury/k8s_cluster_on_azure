@@ -13,27 +13,28 @@ Connect to your managerhost using SSH or any other form that works and follow th
     sudo systemctl start docker 
     ```
 2. Download and install azure CLI
-    For this example I followed [Install the Azure CLI on Linux](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) guide from Microsoft documentation
-    verify with following command
+    For this example I followed [Install the Azure CLI on Linux](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) guide from Microsoft documentation.\
+    Verify with following command
     ```
     az version
     ```
 
 3. Downlaod and install aks-engine
-    For this example I followed [Install the AKS engine on Linux in Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-deploy-linux?view=azs-2206) guide from Microsoft documentation
-    verify with following command
+    For this example I followed [Install the AKS engine on Linux in Azure Stack Hub](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-kubernetes-aks-engine-deploy-linux?view=azs-2206) guide from Microsoft documentation.\
+    Verify with following command
     ```
     aks-engine version
     ```
 
 4. Download and install kubectl
-    Follow the [install kubectl on linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) from the kubernetes documentations
-    verify with following command
+    Follow the [install kubectl on linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) from the kubernetes documentations.\
+    Verify with following command
     ```
     kubectl version
     ```
 
 After you have successfully installed previous packages login to your azure portal with "az login", follow instruction and connect to you azure portal. after you login you should be able to see your account details with "az account show".\
+
 Download files to your managerhost 
 
 ## Run Deployment
