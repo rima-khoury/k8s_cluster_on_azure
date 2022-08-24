@@ -40,8 +40,8 @@ Download files to your working directory and proceed to deployment. In the api m
     navigate to your working directory where you downloaded the project and run myscript.sh
     
     ```
-    /bin/bash myscript.sh
+    source myscript.sh
     ```
-    
+    If you get an error such as : command not found or : invalid option, it might be because github aggregates special characters to *.sh files. in order to overcome this, copy the raw content of the file to your hostmanager and then try to run it again.
 
     
