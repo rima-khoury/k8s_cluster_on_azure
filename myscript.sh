@@ -49,9 +49,9 @@ echo "creating resource group ..."
 az group create --name "$RG" --location "eastus"
 #deploy
 aks-engine deploy  --location eastus --resource-group "$RG" --api-model ./kubernetes-azurestack.json --output-directory k8s_cluster  --force-overwrite --auto-suffix
-#generate ?
-echo "generating api-model ..."
-aks-engine generate --api-model kubernetes-azurestack.json
+#generate template - not needed if aks-engine deploy is run
+#echo "generating api-model ..."
+#aks-engine generate --api-model kubernetes-azurestack.json
 #deploy the cluster
 echo "deploy cluster"
 az deployment group create -g "$RG" --name "k8sClusterDeployment" --template-file ./k8s_cluster/azuredeploy.json --parameters "./k8s_cluster/azuredeploy.parameters.json"
