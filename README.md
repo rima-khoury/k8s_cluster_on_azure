@@ -37,10 +37,10 @@ After you have successfully installed previous packages login to your azure port
 Download files to your working directory and proceed to deployment. In the api model make sure to update the service principal client ID and secret, and the ssh key to your linux host.
 
 ## Run Deployment
-    navigate to your working directory where you downloaded the project and run myscript.sh
+    Navigate to your working directory where you downloaded the project and run myscript.sh
     
     ```
-    source myscript.sh
+    /bin/bash myscript.sh
     ```
     If you get an error such as : command not found or : invalid option, it might be because github aggregates special characters to *.sh files. in order to overcome this, copy the raw content of the file to your hostmanager and then try to run it again.
 
