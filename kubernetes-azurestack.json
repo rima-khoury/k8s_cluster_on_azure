@@ -59,8 +59,8 @@
             "runUnattendedUpgradesOnBootstrap": false
         },
         "servicePrincipalProfile": {
-            "clientId": "0c6c542f-c4bc-4c1f-905d-e3f845b52af7",
-            "secret": "2.n8Q~0VWFnJf1lOrt7nt92PyiX8WN5hOVFnIdhI"
+            "clientId": "",
+            "secret": ""
         }
     }
 }
