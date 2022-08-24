@@ -33,9 +33,15 @@ Connect to your managerhost using SSH or any other form that works and follow th
     kubectl version --client
     ```
 
-After you have successfully installed previous packages login to your azure portal with "az login", follow instruction and connect to you azure portal. after you login you should be able to see your account details with "az account show".\
-
-Download files to your managerhost 
+After you have successfully installed previous packages login to your azure portal with "az login", follow instruction and connect to you azure portal. after you login you should be able to see your account details with "az account show". The next step would be to create a service principal and save the client-ID and client-secret.\
+Download files to your working directory and proceed to deployment. In the api model make sure to update the service principal client ID and secret, and the ssh key to your linux host.
 
 ## Run Deployment
-run script and create your k8s cluster
+    navigate to your working directory where you downloaded the project and run myscript.sh
+    
+    ```
+    /bin/bash myscript.sh
+    ```
+    
+
+    
