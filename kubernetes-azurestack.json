@@ -1,0 +1,66 @@
+{
+    "apiVersion": "vlabs",
+    "location": "",
+    "properties": {
+        "orchestratorProfile": {
+            "orchestratorRelease": "1.21",
+            "orchestratorVersion": "1.21.10",
+            "kubernetesConfig": {
+		"enableRbac": true,
+                "cloudProviderBackoff": true,
+                "cloudProviderBackoffRetries": 1,
+                "cloudProviderBackoffDuration": 30,
+                "cloudProviderRateLimit": true,
+                "cloudProviderRateLimitQPS": 100,
+                "cloudProviderRateLimitBucket": 150,
+                "cloudProviderRateLimitQPSWrite": 25,
+                "cloudProviderRateLimitBucketWrite": 30,
+                "useCloudControllerManager": true,
+                "useInstanceMetadata": false,
+                "networkPlugin": "kubenet",
+                "kubeletConfig": {
+                    "--node-status-update-frequency": "1m"
+                },
+                "controllerManagerConfig": {
+                    "--node-monitor-grace-period": "5m",
+                    "--pod-eviction-timeout": "5m",
+                    "--route-reconciliation-period": "1m"
+                }
+            }
+        },
+        "featureFlags": {
+            "enableTelemetry": true
+        },
+        "masterProfile": {
+            "dnsPrefix": "demomaster",
+            "distro": "aks-ubuntu-18.04",
+            "count": 1,
+            "vmSize": "Standard_DS2_v2"
+        },
+        "agentPoolProfiles": [
+            {
+                "name": "demoworker",
+                "count": 1,
+                "vmSize": "Standard_D2_v2",
+                "distro": "aks-ubuntu-18.04",
+                "availabilityProfile": "AvailabilitySet",
+                "AcceleratedNetworkingEnabled": false
+            }
+        ],
+        "linuxProfile": {
+            "adminUsername": "rima",
+            "ssh": {
+                "publicKeys": [
+                    {
+                        "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEnUEfqk0q053MZNs3LpR2HFCu4TfNOkNIXgpLQgJ+DooZ5OD54Ns0i2Y7uGgEFS8Uviy6k+VW8oF6ufGMxisCmkTACJVSxk0ONjqHb8VNhe+xYN62Pm8qVVYNrcOB0WfAbYNXfEAMFNEqsLaFLcS1hNUDrVSpxrACROCyUzX9i8DsW4JOdoyx15SpbwYVaIsDkE+vmXklY3ZTeHAFpLg8/uzsLKc0MSIP9JBDs5m1zl/W7a22RoMQq/8N31w0I45NU/GGLo+1cjLWDU9vYvGZz8Zq9fdKXzwWk42CGrDrO4XlvIPbCsRB567oIOJXr69PuOBcLX3RW9k6B3+Zdq/L"
+                    }
+                ]
+            },
+            "runUnattendedUpgradesOnBootstrap": false
+        },
+        "servicePrincipalProfile": {
+            "clientId": "0c6c542f-c4bc-4c1f-905d-e3f845b52af7",
+            "secret": "2.n8Q~0VWFnJf1lOrt7nt92PyiX8WN5hOVFnIdhI"
+        }
+    }
+}

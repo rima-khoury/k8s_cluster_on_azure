@@ -1,0 +1,11 @@
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-service
+spec:
+  selector:
+    app: service-simple-app
+  ports:
+    - port: 80

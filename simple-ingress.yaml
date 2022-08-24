@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: simple-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirec: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /bitcoin-rate(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: bitcoin-app
+            port:
+              number: 80
+      - path: /simple-service(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-simple-service
+            port:
+              number: 80
+      - path: /test(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-test
+            port:
+              number: 80
+      - path: /(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: simple-app
+            port:
+              number: 80
