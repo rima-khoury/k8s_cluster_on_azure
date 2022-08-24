@@ -22,7 +22,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: service-simple-service
+            name: simple-service
             port:
               number: 80
       - path: /test(.*)
